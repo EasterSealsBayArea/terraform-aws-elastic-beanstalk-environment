@@ -20,6 +20,7 @@
 | config_source | S3 source for config | string | `` | no |
 | delimiter | Delimiter to be used between `name`, `namespace`, `stage`, etc. | string | `-` | no |
 | description | Short description of the Environment | string | `` | no |
+| elb_scheme | Specify `internal` if you want to create an internal load balancer in your Amazon VPC so that your Elastic Beanstalk application cannot be accessed from outside your Amazon VPC | string | `public` | no |
 | enable_log_publication_control | Copy the log files for your application's Amazon EC2 instances to the Amazon S3 bucket associated with your application. | string | `false` | no |
 | enable_managed_actions | Enable managed platform updates. When you set this to true, you must also specify a `PreferredStartTime` and `UpdateLevel` | string | `true` | no |
 | enable_stream_logs | Whether to create groups in CloudWatch Logs for proxy and deployment logs, and stream logs from each instance in your environment. | string | `false` | no |
@@ -83,6 +84,7 @@
 | cname | Fully qualified DNS name for the environment. |
 | ec2_instance_profile_role_name | Instance IAM role name |
 | elb_dns_name | ELB technical host |
+| elb_load_balancers | Elastic Load Balancers in use by this environment. |
 | elb_zone_id | ELB zone id |
 | host | DNS hostname |
 | id | ID of the Elastic Beanstalk environment. |
